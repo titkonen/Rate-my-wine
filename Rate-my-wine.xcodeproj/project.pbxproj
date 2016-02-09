@@ -7,12 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F016E6B1C5D1198009F2D24 /* MealTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F016E6A1C5D1198009F2D24 /* MealTableViewCell.swift */; };
+		0F016E6D1C5D1E90009F2D24 /* MealTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F016E6C1C5D1E90009F2D24 /* MealTableViewController.swift */; };
 		0F2FE89D1C50189600B1E041 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FE89C1C50189600B1E041 /* AppDelegate.swift */; };
-		0F2FE89F1C50189600B1E041 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FE89E1C50189600B1E041 /* ViewController.swift */; };
+		0F2FE89F1C50189600B1E041 /* MealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FE89E1C50189600B1E041 /* MealViewController.swift */; };
 		0F2FE8A21C50189600B1E041 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FE8A01C50189600B1E041 /* Main.storyboard */; };
 		0F2FE8A41C50189600B1E041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FE8A31C50189600B1E041 /* Assets.xcassets */; };
 		0F2FE8A71C50189600B1E041 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F2FE8A51C50189600B1E041 /* LaunchScreen.storyboard */; };
 		0F2FE8B21C50189700B1E041 /* Rate_my_wineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F2FE8B11C50189700B1E041 /* Rate_my_wineTests.swift */; };
+		0F8C057B1C58E3E3007B76E5 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F8C057A1C58E3E3007B76E5 /* RatingControl.swift */; };
+		0F9456131C5A95AE0000288B /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F9456121C5A95AE0000288B /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F016E6A1C5D1198009F2D24 /* MealTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewCell.swift; sourceTree = "<group>"; };
+		0F016E6C1C5D1E90009F2D24 /* MealTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealTableViewController.swift; sourceTree = "<group>"; };
 		0F2FE8991C50189600B1E041 /* Rate-my-wine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rate-my-wine.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2FE89C1C50189600B1E041 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F2FE89E1C50189600B1E041 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F2FE89E1C50189600B1E041 /* MealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewController.swift; sourceTree = "<group>"; };
 		0F2FE8A11C50189600B1E041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F2FE8A31C50189600B1E041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0F2FE8A61C50189600B1E041 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +42,8 @@
 		0F2FE8AD1C50189700B1E041 /* Rate-my-wineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rate-my-wineTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2FE8B11C50189700B1E041 /* Rate_my_wineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate_my_wineTests.swift; sourceTree = "<group>"; };
 		0F2FE8B31C50189700B1E041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F8C057A1C58E3E3007B76E5 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
+		0F9456121C5A95AE0000288B /* Meal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +86,12 @@
 			isa = PBXGroup;
 			children = (
 				0F2FE89C1C50189600B1E041 /* AppDelegate.swift */,
-				0F2FE89E1C50189600B1E041 /* ViewController.swift */,
+				0F2FE89E1C50189600B1E041 /* MealViewController.swift */,
 				0F2FE8A01C50189600B1E041 /* Main.storyboard */,
+				0F016E6C1C5D1E90009F2D24 /* MealTableViewController.swift */,
+				0F016E6A1C5D1198009F2D24 /* MealTableViewCell.swift */,
+				0F9456121C5A95AE0000288B /* Meal.swift */,
+				0F8C057A1C58E3E3007B76E5 /* RatingControl.swift */,
 				0F2FE8A31C50189600B1E041 /* Assets.xcassets */,
 				0F2FE8A51C50189600B1E041 /* LaunchScreen.storyboard */,
 				0F2FE8A81C50189600B1E041 /* Info.plist */,
@@ -146,6 +158,7 @@
 				TargetAttributes = {
 					0F2FE8981C50189600B1E041 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 88DAFJFCQA;
 					};
 					0F2FE8AC1C50189700B1E041 = {
 						CreatedOnToolsVersion = 7.2;
@@ -197,8 +210,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F2FE89F1C50189600B1E041 /* ViewController.swift in Sources */,
+				0F9456131C5A95AE0000288B /* Meal.swift in Sources */,
+				0F2FE89F1C50189600B1E041 /* MealViewController.swift in Sources */,
+				0F8C057B1C58E3E3007B76E5 /* RatingControl.swift in Sources */,
 				0F2FE89D1C50189600B1E041 /* AppDelegate.swift in Sources */,
+				0F016E6D1C5D1E90009F2D24 /* MealTableViewController.swift in Sources */,
+				0F016E6B1C5D1198009F2D24 /* MealTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,10 +344,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Rate-my-wine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS.Rate-my-wine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -338,10 +358,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Rate-my-wine/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "iOS.Rate-my-wine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -388,6 +411,7 @@
 				0F2FE8B81C50189700B1E041 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F2FE8B91C50189700B1E041 /* Build configuration list for PBXNativeTarget "Rate-my-wineTests" */ = {
 			isa = XCConfigurationList;
@@ -396,6 +420,7 @@
 				0F2FE8BB1C50189700B1E041 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

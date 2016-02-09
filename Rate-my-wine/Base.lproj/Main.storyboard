@@ -1,25 +1,192 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iIC-91-Lxr">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--My wines-->
+        <scene sceneID="s56-2R-cQf">
+            <objects>
+                <tableViewController id="oka-H7-34A" customClass="MealTableViewController" customModule="Rate_my_wine" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="FXi-5u-WO8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MealTableViewCell" rowHeight="90" id="FZA-jJ-yOz" customClass="MealTableViewCell" customModule="Rate_my_wine" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="92" width="600" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FZA-jJ-yOz" id="Sm3-Sl-b8a">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="89"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="5el-P5-HIZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QNs-Ef-KdE">
+                                            <rect key="frame" x="103" y="8" width="489" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LIf-UG-3R1" customClass="RatingControl" customModule="Rate_my_wine" customModuleProvider="target">
+                                            <rect key="frame" x="103" y="36" width="240" height="44"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="QNs-Ef-KdE" id="fUo-h0-ORB"/>
+                                    <outlet property="photoImageView" destination="5el-P5-HIZ" id="wMr-aX-Xxc"/>
+                                    <outlet property="ratingControl" destination="LIf-UG-3R1" id="nMv-3u-50F"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="xpt-IQ-AXc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="oka-H7-34A" id="Mrr-bX-NEa"/>
+                            <outlet property="delegate" destination="oka-H7-34A" id="xn1-IZ-06g"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My wines" id="ZV0-4g-ggQ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="8HN-OZ-3UH">
+                            <connections>
+                                <segue destination="Pma-Bo-81a" kind="presentation" id="fZu-4v-qaF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l7H-uT-n4l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="436" y="354"/>
+        </scene>
+        <!--New wine-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MealViewController" customModule="Rate_my_wine" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Cyh-co-iWm">
+                                <rect key="frame" x="16" y="80" width="351" height="418"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" placeholderIntrinsicWidth="343" placeholderIntrinsicHeight="30" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter wine name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vFv-wE-AYi">
+                                        <rect key="frame" x="0.0" y="0.0" width="351" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                    </textField>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="YH0-tA-MRa">
+                                        <rect key="frame" x="16" y="42" width="320" height="320"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="320" id="0Xu-mi-C69"/>
+                                            <constraint firstAttribute="width" constant="320" id="2r5-61-qrH"/>
+                                            <constraint firstAttribute="width" secondItem="YH0-tA-MRa" secondAttribute="height" multiplier="1:1" id="Cp3-cJ-ZBb"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="YQI-qj-Xxb" appends="YES" id="yjT-V5-mxt"/>
+                                        </connections>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="QpE-aV-1uG" customClass="RatingControl" customModule="Rate_my_wine" customModuleProvider="target">
+                                        <rect key="frame" x="56" y="374" width="240" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vFv-wE-AYi" secondAttribute="trailing" id="2i0-20-jvG"/>
+                                    <constraint firstItem="vFv-wE-AYi" firstAttribute="leading" secondItem="Cyh-co-iWm" secondAttribute="leading" id="V4S-sS-clw"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cyh-co-iWm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="2CR-gT-EVv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cyh-co-iWm" secondAttribute="trailing" constant="-4" id="IrE-Ca-xUc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Cyh-co-iWm" secondAttribute="trailing" constant="-4" id="U5K-u4-PzV"/>
+                            <constraint firstItem="Cyh-co-iWm" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="UJR-6u-eDZ"/>
+                            <constraint firstItem="Cyh-co-iWm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="gaV-nC-Gq1"/>
+                            <constraint firstItem="Cyh-co-iWm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="vd1-zp-sQ3"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="New wine" id="L1e-aW-608">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6BT-SK-qW3">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="zfW-vO-1Rf"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="cf9-DY-0zd">
+                            <connections>
+                                <segue destination="YfP-qF-bt3" kind="unwind" unwindAction="unwindToMealList:" id="UQt-3e-LzD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="vFv-wE-AYi" id="LN6-Nf-lzJ"/>
+                        <outlet property="photoImageView" destination="YH0-tA-MRa" id="n8v-M4-zYg"/>
+                        <outlet property="ratingControl" destination="QpE-aV-1uG" id="pWL-k5-HUQ"/>
+                        <outlet property="saveButton" destination="cf9-DY-0zd" id="AMT-Eq-hwq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="YfP-qF-bt3" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="YQI-qj-Xxb">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="mSc-Dm-GDR"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="1679.5" y="367.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9eD-8s-723">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iIC-91-Lxr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xRJ-HO-pbw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="oka-H7-34A" kind="relationship" relationship="rootViewController" id="1JL-71-zOm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qwa-xE-ihc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-376" y="354"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7ng-Y3-tFJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pma-Bo-81a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2T3-Pi-sr4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ufg-uy-LGj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="60c-ns-RiI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118" y="772"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="defaultPhoto" width="360" height="360"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="xpt-IQ-AXc"/>
+    </inferredMetricsTieBreakers>
 </document>
